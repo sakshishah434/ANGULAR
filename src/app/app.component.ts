@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'thought';
+  txt = "";
+  HideShow: boolean = true;
+  age = 18;
+  color = '';
+  name = ['Darsh', 'Sakshi']
+  user = [{
+    name: 'Darsh',
+    age: 3
+  },
+  {
+    name: 'Sakshi',
+    age: 33
+  }];
 }

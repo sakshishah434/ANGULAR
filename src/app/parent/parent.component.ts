@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
  
-  message: string = '';
-  Message($event:string) {
+  message: string = "";
+  receiveMessage($event:string) {
     this.message = $event;
-    console.log("Message from child:", this.message);
-  } 
+    console.log("Message from parent: ", this.message)
+  }
 }

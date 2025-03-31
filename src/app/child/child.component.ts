@@ -6,10 +6,12 @@ import { Component, EventEmitter, Output} from '@angular/core';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
+  @Output() receiveMessage = new EventEmitter<string>();
  
-  @Output() Message = new EventEmitter;
+dataToParent(){
   
-  dataToParent() {
-    this.Message.emit('come home');
+  this.receiveMessage.emit("come home");
+  
   }
+  
 }

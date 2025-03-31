@@ -1,2 +1,29 @@
-<app-parent></app-parent>
-<h1>Hello world</h1>
+Enter your name : <input type="text" [(ngModel)]=txt><br>
+<h1>Your name is {{txt}}</h1>
+<button *ngIf = "HideShow">Hide and Show</button>
+<div *ngIf = "age <=19;else elseBlock"> You are adult </div>
+<ng-template #elseBlock>
+    <h1>else block is working</h1>
+</ng-template>
+<div [ngSwitch]="color">
+    <h1 style="color: red;" *ngSwitchCase="'red'">Red Color</h1>
+    <h1 style="color: orange;" *ngSwitchCase="'orange'">Orange Color</h1>
+    <h1 *ngSwitchCase="">Default Color</h1>
+</div>
+<ul>
+    <li *ngFor = "let list of name" >{{list}}</li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let users of user">
+            <td>{{users.name}}</td>
+            <td>{{users.age}}</td>
+        </tr>
+    </tbody>
+</table>
