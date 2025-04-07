@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
+  @Input() Nvalue: any;
  
   message: string = "";
   receiveMessage($event:string) {

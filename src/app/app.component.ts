@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserdataService } from './userdata.service';
 
 @Component({
   selector: 'app-root',
@@ -19,5 +20,12 @@ export class AppComponent {
   {
     name: 'Sakshi',
     age: 33
-  }];
+    }];
+  value = "Message from Parent";
+  allList:any=[];
+  constructor(private api: UserdataService) {
+    this.allList = this.api.getAllData()
+  }
+  
+
 }

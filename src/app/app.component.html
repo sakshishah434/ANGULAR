@@ -27,3 +27,20 @@ Enter your name : <input type="text" [(ngModel)]=txt><br>
         </tr>
     </tbody>
 </table>
+<app-parent [Nvalue]="value"></app-parent>
+<h2 appHideshow>Learn Angular</h2>
+<table border="2px">
+    <thead>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Email</td>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let list of allList">
+            <td>{{list.name}}</td>
+            <td>{{list.age}}</td>
+            <td>{{list.email}}</td>
+
+        </tr>
+    </tbody>
+</table>

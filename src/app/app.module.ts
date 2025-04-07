@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FormsModule } from '@angular/forms';
+import { HideshowDirective } from './hideshow.directive';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     ParentComponent,
     ChildComponent,
+    HideshowDirective,
     
     
   ],
