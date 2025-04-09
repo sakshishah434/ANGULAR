@@ -14,8 +14,18 @@ const routes: Routes = [{
   },
   {
     path : 'product/:name', component : ProductComponent
-  }
-];
+  },
+  // {
+  //   path: 'app', loadChildren: () => import('./app/app.module')
+  //   .then(mod=>mod.AppModule)
+  // },
+  // {
+  //   path: 'user', loadChildren: () => import('./user/user.module')
+  //   .then(mod=>mod.UserModule)
+  // }
+]
+  
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

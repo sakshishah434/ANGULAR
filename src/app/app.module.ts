@@ -10,6 +10,8 @@ import { HideshowDirective } from './hideshow.directive';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
+import { UserModule } from './user/user.module';
+
 
 
 @NgModule({
@@ -23,11 +25,13 @@ import { ProductComponent } from './product/product.component';
     ProductComponent,
     
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    UserModule
   ],
   providers: [
     provideClientHydration()
