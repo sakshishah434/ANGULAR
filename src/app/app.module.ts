@@ -10,7 +10,7 @@ import { HideshowDirective } from './hideshow.directive';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
-import { UserModule } from './user/user.module';
+
 
 
 
@@ -31,7 +31,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    UserModule
+    
   ],
   providers: [
     provideClientHydration()
