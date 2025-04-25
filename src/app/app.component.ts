@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { UserdataService } from './userdata.service';
+import { filter, Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -21,11 +23,33 @@ export class AppComponent {
     name: 'Sakshi',
     age: 33
     }];
-  value = "Message from Parent";
-  allList:any=[];
-  constructor(private api: UserdataService) {
-    this.allList = this.api.getAllData()
-  }
+  //  value = "Message from Parent";
+  // allList:any=[];
+  // constructor(private api: UserdataService) {
+  //   this.allList = this.api.getAllData()
+  // }
   
+  constructor() { }
+  ngOnInit() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve("Promise is Working")
+      }, 1000)
+    });
+    promise.then(result => console.log(result));
+
+
+    const observable = new Observable(subscribe => {
+      setTimeout(() => {
+        subscribe.next("Observable is working");
+        subscribe.next("Observable is working1");
+        subscribe.next("Observable is working2");
+      }, 1000)
+    });
+    observable.pipe(filter (d => d === "Observable is working2"))
+      .subscribe(result => console.log(result));
+    
+  }
 
 }
+

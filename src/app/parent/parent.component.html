@@ -1,6 +1,2 @@
-<div>
-<h2>Parent component</h2>
-<app-child  (receiveMessage)="receiveMessage($event)"></app-child>
-{{message}}
-</div>
-<h2>{{Nvalue}}</h2>
+<h2> Parent components </h2>
+ <app-child [newMessage]="message"></app-child>
