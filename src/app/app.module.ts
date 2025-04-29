@@ -10,6 +10,9 @@ import { HideshowDirective } from './hideshow.directive';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserdataService } from './userdata.service';
+import { TdfComponent } from './tdf/tdf.component';
 
 
 
@@ -23,17 +26,19 @@ import { ProductComponent } from './product/product.component';
     HomeComponent,
     AboutComponent,
     ProductComponent,
-    
-    
-    
+    TdfComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
+  ],
+  exports: [
     
   ],
   providers: [
+    
     provideClientHydration()
   ],
   bootstrap: [AppComponent]

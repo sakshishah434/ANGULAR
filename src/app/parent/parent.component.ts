@@ -7,7 +7,7 @@ import { Component,} from '@angular/core';
 })
 export class ParentComponent {
  
-  message = "come home";
+  // message = "come home";
 
   
 }

@@ -6,10 +6,10 @@ import { Component, Input,  } from '@angular/core';
   styleUrl: './child.component.css',
 })
 export class ChildComponent {
-  emit: any;
-  constructor(){}
+  // emit: any;
+  // constructor(){}
   
-   @Input() newMessage: string = "";
+  //  @Input() newMessage: string = "";
 
  
   

@@ -14,42 +14,51 @@ export class AppComponent {
   HideShow: boolean = true;
   age = 18;
   color = '';
-  name = ['Darsh', 'Sakshi']
-  user = [{
-    name: 'Darsh',
-    age: 3
-  },
-  {
-    name: 'Sakshi',
-    age: 33
-    }];
+  // name = ['Darsh', 'Sakshi']
+  // user = [{
+  //   name: 'Darsh',
+  //   age: 3
+  // },
+  // {
+  //   name: 'Sakshi',
+  //   age: 33
+  //   }];
+  users: any
+  constructor(private userDataServices: UserdataService) { }
+  ngOnInit() {
+    // this.userDataServices.getallUsers().subscribe((data: any) => {
+    //   console.log("🚀 ~ AppComponent ~ this.userDataServices.getallUsers ~ data:", data)
+    //   this.users = data;
+    // }); 
+  }
+}
   //  value = "Message from Parent";
   // allList:any=[];
   // constructor(private api: UserdataService) {
   //   this.allList = this.api.getAllData()
   // }
   
-  constructor() { }
-  ngOnInit() {
-    const promise = new Promise(resolve => {
-      setTimeout(() => {
-        resolve("Promise is Working")
-      }, 1000)
-    });
-    promise.then(result => console.log(result));
+//   constructor() { }
+//   ngOnInit() {
+//     const promise = new Promise(resolve => {
+//       setTimeout(() => {
+//         resolve("Promise is Working")
+//       }, 1000)
+//     });
+//     promise.then(result => console.log(result));
 
 
-    const observable = new Observable(subscribe => {
-      setTimeout(() => {
-        subscribe.next("Observable is working");
-        subscribe.next("Observable is working1");
-        subscribe.next("Observable is working2");
-      }, 1000)
-    });
-    observable.pipe(filter (d => d === "Observable is working2"))
-      .subscribe(result => console.log(result));
+//     const observable = new Observable(subscribe => {
+//       setTimeout(() => {
+//         subscribe.next("Observable is working");
+//         subscribe.next("Observable is working1");
+//         subscribe.next("Observable is working2");
+//       }, 1000)
+//     });
+//     observable.pipe(filter (d => d === "Observable is working2"))
+//       .subscribe(result => console.log(result));
     
-  }
+//   }
 
-}
+ 
 
