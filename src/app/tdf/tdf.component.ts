@@ -15,4 +15,8 @@ export class TdfComponent {
     
   }
 
+  resetForm(userForm: NgForm) {
+    userForm.resetForm();
+  }
+
 }
