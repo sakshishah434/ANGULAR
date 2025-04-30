@@ -40,7 +40,7 @@
     formControlName="user"
   />
   <br />
-  <span style="color: blue;" *ngIf="user && user.invalid"> Enter valid value</span>
+  <span style="color: blue;" *ngIf="user && user.invalid && user.untouched"> Enter valid value</span>
   <br />
 
   <input
@@ -49,6 +49,8 @@
     name="password"
     formControlName="password"
   />
+  <br />
+  <span style="color:red;" *ngIf="password && password.invalid && password.untouched"> Enter valid value</span>
   <br />
   <br />
   <button [disabled]="logInForm.invalid">LogIn</button>

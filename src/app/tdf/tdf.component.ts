@@ -11,14 +11,17 @@ export class TdfComponent {
   ngOnInit(): void {}
 
   logInForm = new FormGroup({
-    user: new FormControl('',[Validators.required]),
-    password: new FormControl(''),
+    user: new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),
+    password: new FormControl('',[Validators.required,Validators.minLength(3)]),
   });
   loginUser() {
     console.warn(this.logInForm.value);
   }
   get user() {
     return this.logInForm.get('user');
+  }
+  get password() {
+    return this.logInForm.get('password');
   }
 }
 
