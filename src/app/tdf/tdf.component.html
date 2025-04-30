@@ -1,13 +1,13 @@
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" #name="ngModel" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel>
+      <input type="email" class="form-control" required #email="ngModel" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel>
        <div id="emailHelp" class="form-text">We'll never share your email with anyone else. 
         </div>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label" >Password</label>
-      <input type="password" class="form-control" name="password" id="exampleInputPassword1" ngModel>
+      <input type="password" class="form-control" minlength="2" required #password="ngModel" name="password"  id="exampleInputPassword1" ngModel>
     </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" name="checkbox" id="exampleCheck1" ngModel>
@@ -26,8 +26,9 @@
     </div>
     <button type="submit" class="btn btn-primary mx-4">Submit</button>
     <button type="button" class="btn btn-success mx-6" (click)="resetForm (userForm)">Reset</button>
+    <button [disabled]="userForm.invalid">LogIn</button>
   </form>
   <p>{{userForm.value | json}}</p>
-  <p>Valid:{{userForm.valid}}</p>
+  <!-- <p>Valid:{{userForm.valid}}</p>
   <p>touched:{{userForm.touched}}</p>
-  
+   -->
