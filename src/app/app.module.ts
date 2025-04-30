@@ -13,7 +13,7 @@ import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserdataService } from './userdata.service';
 import { TdfComponent } from './tdf/tdf.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,13 +26,14 @@ import { TdfComponent } from './tdf/tdf.component';
     HomeComponent,
     AboutComponent,
     ProductComponent,
-    TdfComponent, 
+    TdfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     

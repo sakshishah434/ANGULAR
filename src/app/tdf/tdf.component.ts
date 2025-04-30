@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormControl,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-tdf',
@@ -10,13 +11,25 @@ export class TdfComponent {
   ngOnInit(): void {
     
   }
-  onSubmit(data: NgForm) {
-    console.log(data.value);
+
+  logInForm = new FormGroup({
+    user: new FormControl('darsh'),
+    password: new FormControl('456')
+
+  });
+  loginUser() {
+    console.warn(this.logInForm.value);
+  }
     
   }
 
-  resetForm(userForm: NgForm) {
-    userForm.resetForm();
-  }
+  // onSubmit(data: NgForm) {
+  //   console.log(data.value);
+    
+  // }
 
-}
+  // resetForm(userForm: NgForm) {
+  //   userForm.resetForm();
+  // }
+
+
