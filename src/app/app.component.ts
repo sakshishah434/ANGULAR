@@ -23,15 +23,15 @@ export class AppComponent {
   //   name: 'Sakshi',
   //   age: 33
   //   }];
-  users: any
-  constructor(private userDataServices: UserdataService) { }
-  ngOnInit() {
-    this.userDataServices.getallUsers().subscribe((data: any) => {
-      console.log("🚀 ~ AppComponent ~ this.userDataServices.getallUsers ~ data:", data)
-      this.users = data;
-     }); 
-  }
-}
+//   users: any
+//   constructor(private userDataServices: UserdataService) { }
+//   ngOnInit() {
+//     this.userDataServices.getallUsers().subscribe((data: any) => {
+//       console.log("🚀 ~ AppComponent ~ this.userDataServices.getallUsers ~ data:", data)
+//       this.users = data;
+//      }); 
+//   }
+ }
   //  value = "Message from Parent";
   // allList:any=[];
   // constructor(private api: UserdataService) {

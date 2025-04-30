@@ -32,7 +32,7 @@
 <!-- <p>Valid:{{userForm.valid}}</p>
   <p>touched:{{userForm.touched}}</p>
    -->
-<!-- <form [formGroup]="logInForm" (ngSubmit)="loginUser()">
+ <form [formGroup]="logInForm" (ngSubmit)="loginUser()">
   <input
     type="name"
     placeholder="Enter your Name"
@@ -40,6 +40,7 @@
     formControlName="user"
   />
   <br />
+  <span style="color: blue;" *ngIf="user && user.invalid"> Enter valid value</span>
   <br />
 
   <input
@@ -50,5 +51,5 @@
   />
   <br />
   <br />
-  <button>LogIn</button>
-</form> -->
+  <button [disabled]="logInForm.invalid">LogIn</button>
+</form> 

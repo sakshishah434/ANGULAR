@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserdataService {
-  constructor(private http: HttpClient) {}
-  getallUsers(): Observable<any> {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
-  }
+  // constructor(private http: HttpClient) {}
+  // getallUsers(): Observable<any> {
+  //   return this.http.get('https://jsonplaceholder.typicode.com/users');
+  // }
 }
 //   getAllData() {
 //     return [{
