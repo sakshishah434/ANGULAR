@@ -11,17 +11,18 @@ export class TdfComponent {
   ngOnInit(): void {
     
   }
+}
 
-  logInForm = new FormGroup({
-    user: new FormControl('darsh'),
-    password: new FormControl('456')
+  // logInForm = new FormGroup({
+  //   user: new FormControl('darsh'),
+  //   password: new FormControl('456')
 
-  });
-  loginUser() {
-    console.warn(this.logInForm.value);
-  }
+  // });
+  // loginUser() {
+  //   console.warn(this.logInForm.value);
+  // }
     
-  }
+  // }
 
   // onSubmit(data: NgForm) {
   //   console.log(data.value);

@@ -26,10 +26,10 @@ export class AppComponent {
   users: any
   constructor(private userDataServices: UserdataService) { }
   ngOnInit() {
-    // this.userDataServices.getallUsers().subscribe((data: any) => {
-    //   console.log("🚀 ~ AppComponent ~ this.userDataServices.getallUsers ~ data:", data)
-    //   this.users = data;
-    // }); 
+    this.userDataServices.getallUsers().subscribe((data: any) => {
+      console.log("🚀 ~ AppComponent ~ this.userDataServices.getallUsers ~ data:", data)
+      this.users = data;
+     }); 
   }
 }
   //  value = "Message from Parent";
